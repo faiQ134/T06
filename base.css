@@ -1,0 +1,44 @@
+/* Main site stylesheet use classes so we can toggle active state
+*/
+#filters_screen .filter{
+border: none;
+background:#F2B949; /* dark orange by default */
+color: white;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+box-shadow: 0 2px 0 rgba(0,0,0,0.08);
+margin-left: 15px;
+}
+/* Active filter: pale background, dark text */
+#filters_screen .filter.active{
+background: #F2B949; /* pale/light orange */
+color: var(--text);
+}
+#filters_screen .filter:focus{ outline:2px solid
+rgba(0,0,0,0.08); }
+/* Chart container - keep a little spacing */
+.responsive-svg-container{
+width:100%;
+max-width:1000px;
+margin-bottom:28px;
+}
+/* Data source note */
+.body{ margin-top:10px; color:#3f2f28; }
+.body a{ color:var(--accent-dark); font-weight:600; }
+/* Footer */
+footer{
+background: #5a3e2b; /* dark brown */
+color: #ffffff;
+padding:14px 24px;
+margin-top:24px;
+}
+footer p{ margin:0; text-align:center; font-size:14px; }
+/* Small utility */
+.lead{ font-size:16px; color:#4a362e; }
+@media screen and (max-width:596px){
+header h1{ font-size:20px; }
+main{ padding:18px 14px; }
+#filters_screen button{ padding:8px 10px; }
+}

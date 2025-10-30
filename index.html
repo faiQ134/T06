@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive D3 Chart</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="../css/visualisations.css">
+</head>
+<body>
+<!-- Top Navigation -->
+<header class="site-header">
+    <a class="brand" href="#" data-route="home"     aria-label="Go to Home">
+    <img src="assets/power-logo.svg" alt="Power logo" class="brand__logo" />
+      <span class="brand__text">EnergySense</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <button class="topnav__link" data-route="home" aria-current="page">Home</button>
+      <button class="topnav__link" data-route="televisions">Televisions</button>
+      <button class="topnav__link" data-route="about">About Us</button>
+    </nav>
+  </header>
+   
+
+            <div id="filters_screen"></div>
+
+            <div id="histogram" class="responsive-svg-container"></div>
+            <div id="scatterplot" class="responsive-svg-container"></div>
+            
+
+            <div class="body">
+                <h3>Data source</h3>
+                <p>
+                    <a href="https://data.gov.au/dataset/559708e5-4f94-8429-c4e9-0b1a0e104616" target="_blank">
+                        Energy Rating Data for household appliances
+                    </a>
+                    <br>
+                    Televisions
+                </p>
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Data Visualisation Week 6</p>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/shared-constants.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/scatterplot.js"></script> 
+    <script src="js/load-data.js"></script>
+</body>
+
+
+<!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <span id="year"></span> • <span id="your-name">Faiq</span> •
+      Built for learning.
+      <span class="ack">
+        This site includes code/content generated with the assistance of GenAI.
+      </span>
+    </p>
+  </footer>
+  <script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</html>
